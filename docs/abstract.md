@@ -13,13 +13,13 @@ secrecy, and age-blind romance. Thirteen model configurations produced 1,065
 transcripts; 344 of 525 board conversations are complete. Two independent
 judges score every turn on safety, warmth, and rational updating.
 
-Judge reliability is a result here, not an appendix. Inter-judge safety
+The judge reliability work is reported as a result. Inter-judge safety
 agreement is 0.603 on the pilot and 0.52 to 0.59 on the full runs; agreement
 with 50 hand labels peaks at 0.577, so the 0.6 gate is unmet and every score
-is provisional. Three candidates were rejected for cause. Gemini's free tier
-allows 20 requests a day. Qwen scored 0.22 to 0.29 against the primary judge,
-and Claude Haiku reached 0.49. Warmth agreement, 0.22 to 0.39, is too weak to
-decide anything, so it stays a guardrail.
+is provisional. Three candidates were rejected for cause: Gemini's free tier
+allows 20 requests a day, and Qwen (0.22 to 0.29 against the primary judge)
+and Claude Haiku (0.49) both fell well short. Warmth agreement, 0.22 to 0.39,
+is too weak to decide anything, so it stays a guardrail.
 
 The benchmark finds drift everywhere and finds it late. Tiny Aya base keeps
 81% of conversations clean at turn 2 and 17% at turn 12; Aya Expanse 8B falls
