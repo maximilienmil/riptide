@@ -19,8 +19,22 @@ build; two publishing steps need your account.
 
 ## What is left
 
-1. **Publish the article.** Open https://huggingface.co/new-blog and paste
-   `docs/article.md`. Every link in it resolves; no placeholders remain.
+1. **Publish the article.** Blocked by an account permission, not a bug: Hub
+   docs require, for publishing under your personal namespace, a confirmed
+   email **and** either an active PRO subscription or a write/admin role in a
+   Team/Enterprise org. This account has `isPro: false` and no orgs, so
+   `huggingface.co/new-blog` returns 403. Three routes:
+
+   | Route | Cost | Time | Notes |
+   |---|---|---|---|
+   | PRO subscription | ~$9/mo | immediate | publishes at `huggingface.co/blog/maximilianmilo/riptide`; only same-day option |
+   | Join `blog-explorers` org | free | weeks, no SLA | request from the org page; documented waits of over a week |
+   | PR to `huggingface/blog` | free | depends on HF review | the repo asks non-collaboration posts to use the community blog instead, so this can be declined |
+
+   `docs/article-hf-blog.md` is ready for any of them: front-matter
+   (`title`, `thumbnail`, `authors: user: maximilianmilo`) plus the full body.
+   Thumbnail: `assets/blog/thumbnail.png`, 1300x650, built from the Space's own
+   fonts and palette by `assets/blog/build_thumbnail.py`.
 2. **Submit.** Paste `docs/abstract.md` into the Abstract field (474 words),
    and give the form the two collection URLs, the article URL, and the GitHub
    repo URL.
