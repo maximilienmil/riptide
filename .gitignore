@@ -24,3 +24,6 @@ train/data/*.jsonl
 bench/scenarios/
 labels/sheet.html
 bench/spec/examples/f1-std-001.json
+
+# generated static article (assets/blog/build_site.py)
+site/

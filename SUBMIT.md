@@ -19,25 +19,29 @@ build; two publishing steps need your account.
 
 ## What is left
 
-1. **Publish the article.** Blocked by an account permission, not a bug: Hub
-   docs require, for publishing under your personal namespace, a confirmed
-   email **and** either an active PRO subscription or a write/admin role in a
-   Team/Enterprise org. This account has `isPro: false` and no orgs, so
-   `huggingface.co/new-blog` returns 403. Three routes:
+1. **The article is published, but not as an HF blog post.** Hub docs require,
+   for publishing under a personal namespace, a confirmed email **and** either
+   an active PRO subscription or a write/admin role in a Team/Enterprise org.
+   This account has `isPro: false` and no orgs, so `huggingface.co/new-blog`
+   returns 403. Rather than pay, the same article is served from two free hosts:
 
-   | Route | Cost | Time | Notes |
-   |---|---|---|---|
-   | PRO subscription | ~$9/mo | immediate | publishes at `huggingface.co/blog/maximilianmilo/riptide`; only same-day option |
-   | Join `blog-explorers` org | free | weeks, no SLA | request from the org page; documented waits of over a week |
-   | PR to `huggingface/blog` | free | depends on HF review | the repo asks non-collaboration posts to use the community blog instead, so this can be declined |
+   | Host | URL |
+   |---|---|
+   | GitHub Pages | https://maximilienmil.github.io/riptide/ |
+   | Static Space (on the Hub) | https://huggingface.co/spaces/maximilianmilo/riptide-article |
 
-   `docs/article-hf-blog.md` is ready for any of them: front-matter
-   (`title`, `thumbnail`, `authors: user: maximilianmilo`) plus the full body.
-   Thumbnail: `assets/blog/thumbnail.png`, 1300x650, built from the Space's own
-   fonts and palette by `assets/blog/build_thumbnail.py`.
+   Both are built from `docs/article.md` by `assets/blog/build_site.py` in the
+   Space/video design system, so the article, the report cards and the video
+   match. Give the form the Space URL if it wants a Hugging Face link, and the
+   Pages URL as the public web version.
+
+   The only free route to a real `huggingface.co/blog/...` URL is membership of
+   the `blog-explorers` org: request it from the org page, then publish
+   `docs/article-hf-blog.md` (front-matter and thumbnail are ready). Approval is
+   not guaranteed before the deadline.
 2. **Submit.** Paste `docs/abstract.md` into the Abstract field (474 words),
-   and give the form the two collection URLs, the article URL, and the GitHub
-   repo URL.
+   and give the form the two collection URLs, an article URL from the table
+   above, and the GitHub repo URL.
 
 ## What the GitHub repo does not contain, and why
 

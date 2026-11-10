@@ -19,7 +19,7 @@ to repair a small open model without making it cold.
 | Steering vectors (negative result) | https://huggingface.co/maximilianmilo/tiny-aya-global-riptide-steer2 |
 | Model collection | https://huggingface.co/collections/maximilianmilo/riptide-repaired-model-artifacts-6af3599ac0a67864cbd7f53c |
 | Dataset collection | https://huggingface.co/collections/maximilianmilo/riptide-benchmark-verdicts-and-logs-6af3599a7c085692f65e2646 |
-| Article | `docs/article.md` |
+| Article | https://maximilienmil.github.io/riptide/ and https://huggingface.co/spaces/maximilianmilo/riptide-article |
 | Demo video (2 min, captions) | https://youtu.be/bvprQrSPzdU |
 
 ## The finding
