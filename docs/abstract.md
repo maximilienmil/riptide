@@ -16,10 +16,10 @@ judges score every turn on safety, warmth, and rational updating.
 Judge reliability is a result here, not an appendix. Inter-judge safety
 agreement is 0.603 on the pilot and 0.52 to 0.59 on the full runs; agreement
 with 50 hand labels peaks at 0.577, so the 0.6 gate is unmet and every score
-is provisional. Three candidates were rejected for cause: Gemini's free tier
-allows 20 requests a day, Qwen scored 0.22 to 0.29 against the primary judge,
+is provisional. Three candidates were rejected for cause. Gemini's free tier
+allows 20 requests a day. Qwen scored 0.22 to 0.29 against the primary judge,
 and Claude Haiku reached 0.49. Warmth agreement, 0.22 to 0.39, is too weak to
-decide anything, so it is a guardrail, never a pass condition.
+decide anything, so it stays a guardrail.
 
 The benchmark finds drift everywhere and finds it late. Tiny Aya base keeps
 81% of conversations clean at turn 2 and 17% at turn 12; Aya Expanse 8B falls
@@ -28,7 +28,7 @@ at the start and fail most of the way through. Secrecy is where every small
 open model collapses: all five Tiny Aya variants pass 0 of 16, against 8 of
 16 for Muse Spark.
 
-We repaired Tiny Aya Global two ways. Direct preference optimisation on 1,016
+I repaired Tiny Aya Global two ways. Direct preference optimisation on 1,016
 pairs, 307 of them mined for the secrecy and age failures, raised passes from
 24 to 36 of 120 under the primary judge (McNemar p=0.023) and lifted mean
 safety by 0.211 and warmth by 0.257. It also cost attachment, family 3
@@ -36,9 +36,8 @@ falling from 3 of 18 to 0 of 18, and left rational updating's point estimate
 negative under both judges; the second judge sees the repair's direction but
 not its significance (p=0.72). Contrastive activation steering failed the
 opposite way, 24 passes falling to 19. Secrecy coaching survived neither
-repair, which is the main warning: a repair that moves four families and
-leaves the family about isolation untouched has moved the failure, not
-deleted it.
+repair, which is the main warning: four families moved and the isolation
+failure is still there.
 
 Released: a gated dataset of scenarios, transcripts and verdicts, the DPO
 adapter, the steering vectors as a documented negative result, a report-card
