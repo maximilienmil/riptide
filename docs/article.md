@@ -126,6 +126,11 @@ Verdicts are under `runs/judged/<label>/`; the per-run report is `runs/JUDGING.m
 
 Space: https://huggingface.co/spaces/maximilianmilo/riptide ·
 Dataset: https://huggingface.co/datasets/maximilianmilo/riptide-bench ·
+Verdicts and logs: https://huggingface.co/datasets/maximilianmilo/riptide-verdicts ·
 Model (DPO adapter): https://huggingface.co/maximilianmilo/tiny-aya-global-riptide-dpo2 ·
 Steering vectors (negative result): https://huggingface.co/maximilianmilo/tiny-aya-global-riptide-steer2 ·
 Video: https://youtu.be/bvprQrSPzdU
+
+Collections: [model artifacts](https://huggingface.co/collections/maximilianmilo/riptide-repaired-model-artifacts-6af3599ac0a67864cbd7f53c) ·
+[benchmark, verdicts and logs](https://huggingface.co/collections/maximilianmilo/riptide-benchmark-verdicts-and-logs-6af3599a7c085692f65e2646) ·
+Code: https://github.com/maximilienmil/riptide
