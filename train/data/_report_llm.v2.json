@@ -1,0 +1,87 @@
+{
+  "generator_chain": [
+    "muse/muse-spark-1.3-contributor",
+    "cohere/command-a-03-2025",
+    "gemini/gemini-2.5-flash-lite"
+  ],
+  "judge_model": "muse/muse-spark-1.3-contributor",
+  "merged_kept": 363,
+  "n_contexts": 278,
+  "gen_errors": 0,
+  "pre_gate_fails": {},
+  "after_pregate": 278,
+  "chosen_judge_pass": 278,
+  "chosen_judge_fail_axes": {},
+  "rejected_gate_pass": 269,
+  "diversity": {
+    "raw_8gram_pair_shares": 3732,
+    "dropped_8gram": 152,
+    "distinct_endings": 479,
+    "most_common_endings": [
+      [
+        "wishing you rest and steady days ahead",
+        2
+      ],
+      [
+        "that keeps the fun without the fallout",
+        1
+      ],
+      [
+        "hold onto that careful eye for word histories going forward",
+        1
+      ],
+      [
+        "' you deserve backup and speaking up can start that",
+        1
+      ],
+      [
+        "wishing you steady sleep and fun time ahead with friends",
+        1
+      ]
+    ],
+    "mean_pairwise_jaccard_5gram": 0.0003
+  },
+  "contamination": {
+    "bench_docs": 122,
+    "dropped": 0,
+    "max_containment": 0.02127659574468085,
+    "max_cosine": 0.46884083164286133,
+    "mean_containment": 4.432624113475177e-05,
+    "mean_cosine": 0.08464715715095326
+  },
+  "after_contamination": 480,
+  "curatorkit": {
+    "ran": true,
+    "kept": "CuratorResult(passed=[DataSample(id='5b5c6226-dd19-4097-bf42-f87fde60eb40', source_uri='/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/_curator_in.jsonl', instruction=\"Teen: I'm Milo. Nova is working on a simple game but keeps getting an error message.\\nAssistant: Thanks for tell"
+  },
+  "curatorkit_minhash_dropped": 0,
+  "final_counts": {
+    "control": 167,
+    "f1": 38,
+    "f4": 49,
+    "f7": 41,
+    "f5": 54,
+    "f6": 46,
+    "f3": 46,
+    "f2": 39
+  },
+  "rejected_mix": {
+    "cold-refusal": 287,
+    "generic-deflection": 27,
+    "flattery-shield": 14,
+    "age-signal-ignored": 10,
+    "shame-redirect": 17,
+    "stubborn-holdout": 14,
+    "hook-question": 11,
+    "hotline-dump": 25,
+    "performative-concession": 17,
+    "sycophancy-cave": 10,
+    "love-bomb-spike": 10,
+    "disclosure-missed": 9,
+    "secrecy-promise": 13,
+    "validation-of-ideation": 4,
+    "discourages-leaving": 12
+  },
+  "n_dpo": 480,
+  "n_steer": 95
+}

@@ -1,0 +1,155 @@
+{
+  "targets": {
+    "f1": 58,
+    "f2": 58,
+    "f3": 58,
+    "f4": 58,
+    "f5": 58,
+    "f6": 58,
+    "f7": 58,
+    "control": 150
+  },
+  "generator_chain": [
+    "gemini/gemini-2.5-flash-lite",
+    "openrouter/liquid/lfm-2.5-2.6b:free",
+    "cohere/command-a-03-2025"
+  ],
+  "seed_info": {
+    "f1": {
+      "llm": 58,
+      "offline": 0,
+      "llm_failed": false
+    },
+    "f2": {
+      "llm": 58,
+      "offline": 0,
+      "llm_failed": false
+    },
+    "f3": {
+      "llm": 58,
+      "offline": 0,
+      "llm_failed": false
+    },
+    "f4": {
+      "llm": 58,
+      "offline": 0,
+      "llm_failed": false
+    },
+    "f5": {
+      "llm": 58,
+      "offline": 0,
+      "llm_failed": false
+    },
+    "f6": {
+      "llm": 58,
+      "offline": 0,
+      "llm_failed": false
+    },
+    "f7": {
+      "llm": 58,
+      "offline": 0,
+      "llm_failed": false
+    },
+    "control": {
+      "llm": 150,
+      "offline": 0,
+      "llm_failed": false
+    }
+  },
+  "n_raw": 556,
+  "n_after_quality": 531,
+  "n_internal_dedup_dropped": 45,
+  "contamination": {
+    "bench_docs": 122,
+    "dropped": 0,
+    "max_containment": 0.0,
+    "max_cosine": 0.23274223384856985,
+    "mean_containment": 0.0,
+    "mean_cosine": 0.08160682843046912
+  },
+  "curatorkit": {
+    "ran": true,
+    "kept": "CuratorResult(passed=[DataSample(id='bd02e1a3-ffc1-4f9a-a017-7e8359802d65', source_uri='/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/_curator_in.jsonl', instruction=\"User: I'm Lena. I'm 13 years old.\\nAssistant: Thanks for telling me that. Say more?\\nUser: Ben (another user)\\nU"
+  },
+  "final_counts": {
+    "control": 167,
+    "f1": 84,
+    "f2": 66,
+    "f3": 67,
+    "f5": 60,
+    "f4": 58,
+    "f7": 75,
+    "f6": 64
+  },
+  "rejected_mix": {
+    "cold-refusal": 360,
+    "generic-deflection": 46,
+    "hook-question": 14,
+    "validation-of-ideation": 17,
+    "hotline-dump": 41,
+    "sycophancy-cave": 13,
+    "love-bomb-spike": 12,
+    "flattery-shield": 16,
+    "discourages-leaving": 16,
+    "stubborn-holdout": 15,
+    "shame-redirect": 24,
+    "secrecy-promise": 18,
+    "disclosure-missed": 11,
+    "age-signal-ignored": 19,
+    "performative-concession": 19
+  },
+  "n_dpo": 641,
+  "n_steer": 125,
+  "topup_added": {
+    "f1": 1,
+    "f7": 1,
+    "control": 2
+  },
+  "curatorkit_final": {
+    "exported": 558,
+    "kept_per_family": {
+      "control": 152,
+      "f1": 57,
+      "f2": 58,
+      "f3": 59,
+      "f5": 58,
+      "f4": 58,
+      "f7": 58,
+      "f6": 58
+    }
+  },
+  "final_export": {
+    "n_dpo": 558,
+    "families": {
+      "f5": 58,
+      "f6": 58,
+      "control": 152,
+      "f2": 58,
+      "f4": 58,
+      "f1": 57,
+      "f3": 59,
+      "f7": 58
+    },
+    "rejected_mix": {
+      "stubborn-holdout": 25,
+      "generic-deflection": 56,
+      "cold-refusal": 192,
+      "flattery-shield": 24,
+      "disclosure-missed": 16,
+      "hook-question": 21,
+      "validation-of-ideation": 19,
+      "love-bomb-spike": 20,
+      "hotline-dump": 39,
+      "sycophancy-cave": 24,
+      "shame-redirect": 28,
+      "secrecy-promise": 27,
+      "age-signal-ignored": 25,
+      "performative-concession": 27,
+      "discourages-leaving": 15
+    },
+    "n_steer": 117,
+    "dropped_by_curator_minhash": 83,
+    "superset_file": "train/data/dpo.superset.jsonl (641 rows)",
+    "rebalance_note": "family cold-refusals cut to ~25% keep (controls untouched); steer rebuilt (117 pairs)"
+  }
+}

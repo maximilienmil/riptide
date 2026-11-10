@@ -1,0 +1,37 @@
+{
+  "cross_chosen_sampled": {
+    "control": 42,
+    "f1": 10,
+    "f2": 10,
+    "f3": 12,
+    "f4": 13,
+    "f5": 14,
+    "f6": 12,
+    "f7": 11
+  },
+  "cross_models": {
+    "openrouter/recursive/flint-v1.0:free": 382,
+    "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free": 4
+  },
+  "cross_errors": 0,
+  "cross_missing_quota": 97,
+  "cross_kappa": {
+    "n": 386,
+    "agree": 378,
+    "table": [
+      [
+        378,
+        3
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "po": 0.9793,
+    "pe": 0.9795,
+    "kappa": -0.0098
+  },
+  "cross_drop_base_groups": 1,
+  "cross_drop_new": 2
+}

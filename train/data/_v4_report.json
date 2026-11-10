@@ -1,0 +1,28 @@
+{
+ "seed": 20261106,
+ "gen_model": "muse/muse-spark-1.3-contributor",
+ "batch": 4,
+ "old_n": 709,
+ "new_n": 307,
+ "total": 1016,
+ "stats": {
+  "gen_calls": 58,
+  "gen_failed": 5,
+  "items_raw": 190,
+  "pre_gate fails": {},
+  "judge fails": {
+   "chosen_gate": 37,
+   "banned stock closer/secrecy line in chosen": 2
+  }
+ },
+ "diversity": {
+  "dropped_8gram": 43,
+  "distinct_endings": 331,
+  "mean_pairwise_jaccard_5gram": 0.0015
+ },
+ "dropped_echo_vs_v3": 25,
+ "by_family": {
+  "f6": 174,
+  "f7": 133
+ }
+}

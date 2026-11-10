@@ -1,0 +1,20 @@
+[project]
+name = "riptide"
+version = "0.1.0"
+description = "Riptide multi-turn benchmark runner"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+riptide = "riptide.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["riptide"]

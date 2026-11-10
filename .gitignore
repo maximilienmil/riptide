@@ -1,0 +1,26 @@
+private/
+.env
+*.pdf
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+
+# data lives on the Hub, not in git
+runs/
+upload/
+archive/
+.impeccable/
+assets/video/build/
+space/preview-*.png
+
+# weights and training data are on the Hub; the JSONL pairs contain
+# transcript text that the dataset card gates
+train/out/
+train/data/*.jsonl
+
+# the scenario scripts and the labelling sheet quote gated transcript text;
+# they ship only through the gated dataset
+bench/scenarios/
+labels/sheet.html
+bench/spec/examples/f1-std-001.json

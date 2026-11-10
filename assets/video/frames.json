@@ -1,0 +1,162 @@
+[
+ {
+  "beat": "beat-0-note",
+  "frame": "0-note",
+  "file": "beat-0-note.html",
+  "start": 0,
+  "end": 5.0,
+  "shot": 4.65
+ },
+ {
+  "beat": "beat-1-pattern",
+  "frame": "1a-kind",
+  "file": "beat-1-pattern.html",
+  "start": 0,
+  "end": 5,
+  "shot": 4.65
+ },
+ {
+  "beat": "beat-1-pattern",
+  "frame": "1b-promise",
+  "file": "beat-1-pattern.html",
+  "start": 5,
+  "end": 12,
+  "shot": 11.65
+ },
+ {
+  "beat": "beat-1-pattern",
+  "frame": "1c-turn6",
+  "file": "beat-1-pattern.html",
+  "start": 12,
+  "end": 19,
+  "shot": 18.65
+ },
+ {
+  "beat": "beat-1-pattern",
+  "frame": "1d-turn8",
+  "file": "beat-1-pattern.html",
+  "start": 19,
+  "end": 26,
+  "shot": 25.65
+ },
+ {
+  "beat": "beat-1-pattern",
+  "frame": "1e-score",
+  "file": "beat-1-pattern.html",
+  "start": 26,
+  "end": 33.0,
+  "shot": 32.65
+ },
+ {
+  "beat": "beat-2-failure",
+  "frame": "2a-asks",
+  "file": "beat-2-failure.html",
+  "start": 0,
+  "end": 8,
+  "shot": 7.65
+ },
+ {
+  "beat": "beat-2-failure",
+  "frame": "2b-promise",
+  "file": "beat-2-failure.html",
+  "start": 8,
+  "end": 15,
+  "shot": 14.65
+ },
+ {
+  "beat": "beat-2-failure",
+  "frame": "2c-judges",
+  "file": "beat-2-failure.html",
+  "start": 15,
+  "end": 23,
+  "shot": 22.65
+ },
+ {
+  "beat": "beat-2-failure",
+  "frame": "2d-careful",
+  "file": "beat-2-failure.html",
+  "start": 23,
+  "end": 30.0,
+  "shot": 29.65
+ },
+ {
+  "beat": "beat-3-reportcard",
+  "frame": "3a-judges",
+  "file": "beat-3-reportcard.html",
+  "start": 0,
+  "end": 5,
+  "shot": 4.65
+ },
+ {
+  "beat": "beat-3-reportcard",
+  "frame": "3b-headline",
+  "file": "beat-3-reportcard.html",
+  "start": 5,
+  "end": 11,
+  "shot": 10.65
+ },
+ {
+  "beat": "beat-3-reportcard",
+  "frame": "3c-bars",
+  "file": "beat-3-reportcard.html",
+  "start": 11,
+  "end": 18,
+  "shot": 17.65
+ },
+ {
+  "beat": "beat-3-reportcard",
+  "frame": "3d-grid",
+  "file": "beat-3-reportcard.html",
+  "start": 18,
+  "end": 25,
+  "shot": 24.65
+ },
+ {
+  "beat": "beat-3-reportcard",
+  "frame": "3e-secrecy",
+  "file": "beat-3-reportcard.html",
+  "start": 25,
+  "end": 30.0,
+  "shot": 29.65
+ },
+ {
+  "beat": "beat-4-repair",
+  "frame": "4a-two",
+  "file": "beat-4-repair.html",
+  "start": 0,
+  "end": 3.5,
+  "shot": 3.15
+ },
+ {
+  "beat": "beat-4-repair",
+  "frame": "4b-dpo",
+  "file": "beat-4-repair.html",
+  "start": 3.5,
+  "end": 9,
+  "shot": 8.65
+ },
+ {
+  "beat": "beat-4-repair",
+  "frame": "4c-steer",
+  "file": "beat-4-repair.html",
+  "start": 9,
+  "end": 14,
+  "shot": 13.65
+ },
+ {
+  "beat": "beat-4-repair",
+  "frame": "4d-axes",
+  "file": "beat-4-repair.html",
+  "start": 14,
+  "end": 19,
+  "shot": 18.65
+ },
+ {
+  "beat": "beat-4-repair",
+  "frame": "4e-close",
+  "file": "beat-4-repair.html",
+  "start": 19,
+  "end": 22.0,
+  "shot": 21.65
+ }
+]
