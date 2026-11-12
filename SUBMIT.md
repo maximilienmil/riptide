@@ -74,3 +74,44 @@ build; two publishing steps need your account.
   (screenshots), not by a browser in this session.
 - The repo has no LICENSE file. The data-derived artifacts are CC-BY-NC-4.0;
   the code has no licence declared yet, so treat it as all rights reserved.
+
+## Deadline and consent (recorded 2026-11-12)
+
+Three boxes on the form are being ticked, and the third one freezes the
+submission:
+
+1. The article and submission may be shared and promoted by Hugging Face and
+   Cohere on their socials, and there may be an invitation to a featured blog
+   based on the submission.
+2. The organising team may tag the author for winning, featured or highlighted
+   submissions.
+3. **All repos and collections are public and final as of Nov 15, 11:59 PM AoE.
+   Nothing changes after the deadline.**
+
+Deadline in local time: **Monday 16 November 2026, 06:59 EST** (11:59 UTC).
+In practice that is Sunday night, not Monday.
+
+Because box 3 freezes everything, here is the state that would be frozen if
+nothing else changes:
+
+| Repo | Type | Visibility | Commit |
+|---|---|---|---|
+| `maximilianmilo/riptide` | space | public | `016bbb31` |
+| `maximilianmilo/riptide-article` | space | public | `80973095` |
+| `maximilianmilo/riptide-bench` | dataset | public, gated (manual) | `c7e15bb4` |
+| `maximilianmilo/riptide-verdicts` | dataset | public, gated (manual) | `25635c22` |
+| `maximilianmilo/tiny-aya-global-riptide-dpo2` | model | public | `c827fab8` |
+| `maximilianmilo/tiny-aya-global-riptide-steer2` | model | public | `ca2eedf3` |
+| `github.com/maximilienmil/riptide` | repo | public | `92ef0e5` |
+| `gh-pages` (article page) | branch | public | `29c927a3` |
+
+The AI disclosure at the top of the article matters more under consent 1 than
+it would otherwise: if Hugging Face or Cohere promote this, the authorship
+statement should travel with it rather than be discovered later.
+
+Open decision before the freeze: **the article title**. It is still the long
+two-clause version. The alternative chosen in discussion is *Clean at turn two,
+failing by turn twelve*, with *Riptide: a multi-turn safety audit of eight
+chatbots* as the subtitle. Changing it means four edits (article H1, page
+header, blog front-matter, README) and a republish of both hosts. After the
+deadline it cannot be changed at all.
