@@ -33,7 +33,7 @@ h1{font:400 clamp(2.4rem,6vw,4rem)/1.02 var(--cond);letter-spacing:-.01em;margin
 img.hero{display:block;width:100%;height:auto;margin:2.6rem 0 0;border:1px solid var(--rule)}
 .disclosure{margin:0 0 1.6rem;padding:.9rem 1rem;border-left:3px solid var(--signal);
   background:var(--cell);font-size:15px;line-height:1.55;color:var(--mute-p)}
-.disclosure p{margin:0}
+.disclosure p{margin:0 0 .7rem}.disclosure p:last-child{margin-bottom:0}
 .disclosure strong{color:var(--ink)}
 article{padding-top:2.6rem}
 h2{font:400 clamp(1.7rem,3.4vw,2.3rem)/1.15 var(--cond);margin:3.2rem 0 .9rem}
@@ -60,10 +60,11 @@ footer a{color:var(--patina-p)}
 <body>
 <div class="wrap">
 <header class="top">
-  <p class="kicker">Riptide &middot; multi-turn safety audit</p>
   <h1>Riptide: a turn-by-turn safety audit for teen conversations</h1>
   <p class="byline">Maximilian Milovidov &middot; November 2026</p>
-  <div class="disclosure"><p><strong>Disclosure.</strong> I directed this project and labelled the 50 turns behind the reliability figures. The rest was built with AI: coding agents (Muse Spark, Claude Sonnet and Codex, working from my instructions) wrote the runner, the judging harness, the training scripts and the figures, and drafted and edited the prose here over several passes. I chose what to measure, which models to test, which judges to reject, and what the results mean, and I signed off on the text. Every number traces to a file in the repository, listed in <code>docs/article-claims.md</code>, and the verdicts and run logs are published so the claims can be checked without taking my word for it.</p></div>
+  <div class="disclosure"><p><strong>Disclosure.</strong> I directed this project and labelled the 50 turns behind the reliability figures. The rest was built with AI: coding agents (Muse Spark, Claude Sonnet and Codex, working from my instructions) wrote the runner, the judging harness, the training scripts and the figures, and drafted and edited the prose here over several passes. I chose what to measure, which models to test, which judges to reject, and what the results mean, and I signed off on the text. Every number traces to a file in the repository, listed in <code>docs/article-claims.md</code>, and the verdicts and run logs are published so the claims can be checked without taking my word for it.</p>
+<p><strong>What this is.</strong> Riptide is an experimental research project, built for the Lexsi Labs hackathon in November 2026. It is not approved for production use, and it must not be used to certify that a chatbot is safe for young people. It aims to start, and to build on, the existing work on how large language models persuade people and how that affects young people and other vulnerable groups.</p>
+<p><strong>A limit on the scores.</strong> I tried to score as objectively as I could, but there are no independent benchmarks or settled best practices for how chatbots affect teenagers, and every person is different. These scores are a best-guess effort to add to the evidence we have, not a verdict on any model.</p></div>
   <p class="artifacts">
     <a href="https://huggingface.co/spaces/maximilianmilo/riptide">Report cards</a>
     <a href="https://huggingface.co/datasets/maximilianmilo/riptide-bench">Dataset</a>
@@ -144,7 +145,7 @@ footer a{color:var(--patina-p)}
 <p>The cause is turn alignment: a judge that scores the whole conversation while quoting a different turn cannot be trusted per turn. The primary judge attaches its evidence to the scored turn in 97% of the verdicts it quoted (196 of 203). Qwen3-32B manages that in 47% of the 85 turns it quoted, and 48% of its quotes match nowhere; Qwen2.5-72B reaches 68% of its 76 quotes but leaves 133 of 209 turns with no quote at all, against 124 for Qwen3-32B. The alignment check now runs before any judge is promoted.</p>
 <p>Luna and Muse also agree with each other only moderately turn by turn. On the 209 pilot turns they reach 0.603, and on the full runs 0.532 (base, n=928 paired turns), 0.520 (DPO v1, n=961), 0.560 (Aya Expanse 8B, n=1,070), and 0.594 (Muse, n=1,078). Warmth agreement is far worse, 0.221 to 0.391, so no pass/fail decision here depends on W. The 50 labels are a hard, disagreement-enriched slice, so treat the kappas above as floors. <!-- refresh kappa if runs/judged rerun lands --></p>
 <h2>Results</h2>
-<p>The board is 344 of 525 conversations complete. <code>gemma-4-26b</code> never started and <code>nemotron-35-lightning</code> stopped at 60 of 120, and since neither has judged verdicts, neither appears below. The three CLI rows are 15-scenario standard-register slices (one Sonnet transcript was incomplete) and are comparable only to each other. Both judges now score every 120-scenario run, except that Aya Expanse loses one of its 120 conversations to an errored Luna turn, so its denominator is 119.</p>
+<p>The board covers 645 planned conversations across six models in eight configurations. Two further models planned for the board could not be completed on free-tier quota and are left out of every finding here; the details are in <code>docs/technical-notes.md</code>. The three CLI rows are 15-scenario standard-register slices (one Sonnet transcript was incomplete) and are comparable only to each other. Both judges now score every 120-scenario run, except that Aya Expanse loses one of its 120 conversations to an errored Luna turn, so its denominator is 119.</p>
 <table>
 <thead>
 <tr>
