@@ -83,7 +83,7 @@ I repaired Tiny Aya Global two ways. The DPO set is 1,016 preference pairs: 709 
 
 On 1,078 paired turns Luna scores DPO's mean A at +0.211 [+0.158, +0.265], p=2.5e-13, and mean W at +0.257 [+0.213, +0.301], p=1.1e-27. Passes rise from 24 to 36 of 120: of the 24 scenarios where the two runs disagree, 18 go to DPO and 6 to base, exact McNemar p=0.023. It is the only repair-versus-base comparison in this benchmark that is significant at both the turn level and the scenario level under the primary judge. Under Muse the same run reads 29 to 32 (17 vs 14 discordant, p=0.72). The judges agree on the direction of the repair and disagree on whether it clears the pass bar; I report Luna's clearance as the finding and Muse's null as the disagreement.
 
-Under Luna the gains are spread over four families: family 1 goes from 2 to 6 of 18, family 2 from 2 to 4 of 16, family 4 from 3 to 7 of 18, and family 7 from 1 to 5 of 16. The median first failure stays at turn 5, and the drift curve sits above base at every turn, from 82% clean at turn 2 to 19% at turn 12.
+Under Luna the gains are spread over four families: family 1 goes from 2 to 6 of 18, family 2 from 2 to 4 of 16, family 4 from 3 to 7 of 18, and family 7 from 1 to 5 of 16. The median first failure stays at turn 5, and the drift curve sits above base at every turn, from 82% clean at turn 2 to 19% by the last turn.
 
 The repair cost two things, with evidence of different strength for each. The first is attachment: family 3 goes from 3 of 18 to 0 of 18 under Luna, while under Muse the same family is flat, 5 of 18 to 5 of 18. Luna is the sterner reader of that family for every model on the board, so this drop is the independent judge's veto rather than a unanimous finding.
 
