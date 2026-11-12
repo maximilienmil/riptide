@@ -2,6 +2,10 @@
 
 **Disclosure.** I directed this project and labelled the 50 turns behind the reliability figures. The rest was built with AI: coding agents (Muse Spark, Claude Sonnet and Codex, working from my instructions) wrote the runner, the judging harness, the training scripts and the figures, and drafted and edited the prose here over several passes. I chose what to measure, which models to test, which judges to reject, and what the results mean, and I signed off on the text. Every number traces to a file in the repository, listed in `docs/article-claims.md`, and the verdicts and run logs are published so the claims can be checked without taking my word for it.
 
+**What this is.** Riptide is an experimental research project, built for the Lexsi Labs hackathon in November 2026. It is not approved for production use, and it must not be used to certify that a chatbot is safe for young people. It aims to start, and to build on, the existing work on how large language models persuade people and how that affects young people and other vulnerable groups.
+
+**A limit on the scores.** I tried to score as objectively as I could, but there are no independent benchmarks or settled best practices for how chatbots affect teenagers, and every person is different. These scores are a best-guess effort to add to the evidence we have, not a verdict on any model.
+
 ## Thesis
 
 Single-prompt safety tests miss the failure that matters most for teenagers, because it builds over a conversation. A teenager in trouble rarely opens with the crisis: they hint on Monday and say it outright on Friday, with a silence between, and each reply along the way can look harmless while the conversation drifts somewhere unsafe.
@@ -58,7 +62,7 @@ Luna and Muse also agree with each other only moderately turn by turn. On the 20
 
 ## Results
 
-The board is 344 of 525 conversations complete. `gemma-4-26b` never started and `nemotron-35-lightning` stopped at 60 of 120, and since neither has judged verdicts, neither appears below. The three CLI rows are 15-scenario standard-register slices (one Sonnet transcript was incomplete) and are comparable only to each other. Both judges now score every 120-scenario run, except that Aya Expanse loses one of its 120 conversations to an errored Luna turn, so its denominator is 119.
+The board covers 645 planned conversations across six models in eight configurations. Two further models planned for the board could not be completed on free-tier quota and are left out of every finding here; the details are in `docs/technical-notes.md`. The three CLI rows are 15-scenario standard-register slices (one Sonnet transcript was incomplete) and are comparable only to each other. Both judges now score every 120-scenario run, except that Aya Expanse loses one of its 120 conversations to an errored Luna turn, so its denominator is 119.
 
 | Model | Runs | Pass, Luna | Pass, Muse | Mean A | Mean W | Median first failure |
 |---|---|---|---|---|---|---|

@@ -104,13 +104,6 @@ MODELS = [
      "note": "n=15, standard register only, via CLI. Luna is judge B, so only Muse's score is shown."},
 ]
 
-UNSCORED = [
-    {"id": "gemma-4-26b", "label": "Gemma 4 26B",
-     "note": "Not completed (free-tier quota)."},
-    {"id": "nemotron-35-lightning", "label": "Nemotron 3.5 Lightning",
-     "note": "Not completed (free-tier quota)."},
-]
-
 SURVIVAL_TURNS = list(range(1, 13))
 JUDGE_OF_MODEL = {"muse-spark-1.3": "a", "codex-gpt-6-luna-cli": "b"}
 
@@ -473,8 +466,12 @@ def main() -> None:
         "families": [{"n": n, **FAMILIES[n]} for n in sorted(FAMILIES)],
         "gated_families": list(GATED_FAMILIES),
         "grade_bands": [{"min": t, "grade": g} for t, g in GRADE_BANDS],
+        # plain-language tiers for the page, derived from the grade bands:
+        # Mostly safe = grades A and B, Mixed = C and D, Often unsafe = F.
+        "tiers": [{"id": "safe", "label": "Mostly safe", "min": GRADE_BANDS[1][0]},
+                  {"id": "mixed", "label": "Mixed", "min": GRADE_BANDS[3][0]},
+                  {"id": "unsafe", "label": "Often unsafe", "min": 0.0}],
         "models": summaries,
-        "unscored": UNSCORED,
         "story": build_story(lb),
         "survival_turns": SURVIVAL_TURNS,
     }
