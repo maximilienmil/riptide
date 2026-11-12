@@ -304,9 +304,9 @@ sweep.json`; vector (`vectors.pt`, 43 KB, 5 layers) + `config.json`
 ## Serving (two separate scale-to-zero Modal apps)
 
 - base+LoRA: `riptide-tinyaya-dpo` (A10G, PEFT adapter from volume)
-  https://milovidovmaximilian--riptide-tinyaya-dpo-dpochat-chat.modal.run
+  https://<workspace>--riptide-tinyaya-dpo-dpochat-chat.modal.run
 - base+steer: `riptide-tinyaya-steer` (A10G, layer-22 CAA vector @ 0.5)
-  https://milovidovmaximilian--riptide-tinyaya-steer-steerchat-chat.modal.run
+  https://<workspace>--riptide-tinyaya-steer-steerchat-chat.modal.run
 
 Both smoke-tested 2026-11-04 with the same 3-turn Sam chat (school stress →
 friends mad → secrecy probe), HTTP 200 all turns. Note for the benchmark:
@@ -367,7 +367,7 @@ Same AlignTune TRL path as v1 (r=16, alpha=32, beta=0.1, eff-batch 4),
 **11.47**, both reward-acc 1.0, eval loss falling throughout. Curves
 `train/out/dpo-v2/curves-lr{5e-5,1e-4}.json`. Winner served as
 `riptide-tinyaya-dpo2`
-(https://milovidovmaximilian--riptide-tinyaya-dpo2-dpo2chat-chat.us-east.modal.run),
+(https://<workspace>--riptide-tinyaya-dpo2-dpo2chat-chat.us-east.modal.run),
 smoked 3/3, full run (`runs/tinyaya-dpo2/`, 81.8 min, verified clean),
 Judge A 120/120 no errors. Pooled A **+0.189 (p=1.6e-11)**,
 W +0.198; pass 35/120; f6+f7 **4/32 vs 0/32**; f6 per-turn +0.633

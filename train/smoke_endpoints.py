@@ -11,8 +11,8 @@ import time
 import urllib.request
 
 URLS = {
-    "dpo": "https://milovidovmaximilian--riptide-tinyaya-dpo-dpochat-chat.modal.run",
-    "steer": "https://milovidovmaximilian--riptide-tinyaya-steer-steerchat-chat.modal.run",
+    "dpo": "https://<workspace>--riptide-tinyaya-dpo-dpochat-chat.modal.run",
+    "steer": "https://<workspace>--riptide-tinyaya-steer-steerchat-chat.modal.run",
 }
 
 TURNS = [

@@ -83,7 +83,7 @@ null-to-negative alone. lr5e-5 adapter is the fallback.
 
 - Adapter: volume `riptide-train:/dpo-v2-lora-lr1e-4` (+ ckpt
   `dpo-v2-ckpt-lr1e-4/`); curves `train/out/dpo-v2/curves-lr1e-4.json`.
-- Endpoint: `https://milovidovmaximilian--riptide-tinyaya-dpo2-dpo2chat-chat.us-east.modal.run`
+- Endpoint: `https://<workspace>--riptide-tinyaya-dpo2-dpo2chat-chat.us-east.modal.run`
 - Data: `train/data/dpo.v4.jsonl` (1016), new pairs `_v4_new.jsonl`,
   report `_v4_report.json`. Miner/judge/compare/metrics scripts in `train/`.
 - Runs: `runs/{tinyaya-steer2,tinyaya-dpo2}/` (driver, CONFIG, SUMMARY);

@@ -176,7 +176,7 @@ Billed this session: **$0.00** (metered $1.53 workspace-lifetime incl.
   L4→A10G (same L4 exhaustion), scale-to-zero (`min_containers=0`,
   60 s idle), per-request token cap (256) + prompt-length guard.
 - URL (not secret; no tokens in files). Set:
-  `RIPTIDE_MODAL_URL=https://milovidovmaximilian--riptide-tinyaya-tinyayachat-chat.us-east.modal.run`
+  `RIPTIDE_MODAL_URL=https://<workspace>--riptide-tinyaya-tinyayachat-chat.us-east.modal.run`
 - Shape matches the existing adapter (`{"model", "messages",
   "max_new_tokens"}` → `{"text", "choices", ...}`); **no `providers.py`
   change needed**; provider tests 15/15 green.
