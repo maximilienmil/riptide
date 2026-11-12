@@ -63,7 +63,7 @@ texting), for 120 scenario files. Every file validates against
 - **Seeded from verified public cases.** Real quotes seed the opening or
   critical turn; the remaining turns are authored. Every scenario carries
   a `seeded_from` URL pointing at a primary source. Seed rows come from
-  `research/quotes.v2.jsonl`, restricted to verified-true rows. Never
+  an internal table of verified quotes (not republished), restricted to verified-true rows. Never
   seeded: unverified rows, aggregator paraphrases, delusion content (out
   of scope), and adult-sample rows.
 - **Quote rules.** Quotes from news and court filings are at most 40

@@ -1,4 +1,4 @@
-# Riptide: harm that builds slowly across a conversation, and a repair that keeps the model kind
+# Riptide: a turn-by-turn safety audit for teen conversations
 
 **Disclosure.** I directed this project and labelled the 50 turns behind the reliability figures. The rest was built with AI: coding agents (Muse Spark, Claude Sonnet and Codex, working from my instructions) wrote the runner, the judging harness, the training scripts and the figures, and drafted and edited the prose here over several passes. I chose what to measure, which models to test, which judges to reject, and what the results mean, and I signed off on the text. Every number traces to a file in the repository, listed in `docs/article-claims.md`, and the verdicts and run logs are published so the claims can be checked without taking my word for it.
 
@@ -36,7 +36,7 @@ The pass rule is strict: no safety score of 0 anywhere, and at least 2 on every 
 
 Riptide v0.1 has 60 base scenarios, each in a standard and a teen-texting register, so 120 files, all schema-valid (0 errors, 4 Nov 2026). Conversations run 8 to 12 turns (774 scripted, 424 adaptive), with turn 1 an unjudged warm-up almost everywhere. Critical turns fall between 4 and 11, and twenty scenarios run 12 turns with the critical turn at 9 to 11 to test late drift; ages run 13 to 17 in both registers.
 
-A real quote, where one exists, seeds the opening or the critical turn. The rest of the conversation is authored. All 120 scenarios carry a `seeded_from` URL, and for the pattern-only seeds that URL points to the taxonomy instead of a quote. Quotes are capped at 40 words and attributed, no real minor's name appears, and case filings are paraphrased. Machine scans found zero method or means terms in family 1 and zero sexual-description terms in family 2. Details are in `docs/dataset-card.md` and `bench/scenarios/README.md`.
+A real quote, where one exists, seeds the opening or the critical turn. The rest of the conversation is authored. All 120 scenarios carry a `seeded_from` URL, and for the pattern-only seeds that URL points to the taxonomy instead of a quote. Scenarios paraphrase their public sources and link them, and no real minor's name appears in any scenario. The short attributed excerpts that grounded them (40 words or fewer each) are not republished here. Machine scans found zero method or means terms in family 1 and zero sexual-description terms in family 2. Details are in `docs/dataset-card.md` and `bench/scenarios/README.md`.
 
 The two registers exist because a model that handles a neatly punctuated disclosure can miss the same words as a lowercase run-on at 1 a.m.; whether the judges read both equally well is unresolved.
 
@@ -73,7 +73,7 @@ The board is 344 of 525 conversations complete. `gemma-4-26b` never started and 
 
 Mean A and mean W are Luna's per judged turn; the Muse pass count is over the same scenarios. Muse Spark is the only row where the judges differ by more than five conversations, and Muse is also judge A; the Codex CLI row, where Luna is judge B, shows the same pull the other way.
 
-In the drift curves, Tiny Aya base keeps 81% of runs clean at turn 2 and 17% at turn 12, and Aya Expanse 8B falls from 92% to 26%; even Muse Spark, the strongest row, goes from 97% to 71%. A model can look adequate at the start and fail most of the way through.
+In the drift curves, Tiny Aya base keeps 81% of runs clean at turn 2 and 17% by the last turn, and Aya Expanse 8B falls from 92% to 26%; even Muse Spark, the strongest row, goes from 97% to 71%. The last point on each curve is the share of conversations that never failed: a conversation that ends before turn 12 without a failure stays clean. A model can look adequate at the start and fail most of the way through.
 
 Family 6 (secrecy) is where every open Tiny Aya run collapses: all five variants, base and both DPO and both steering runs, pass 0 of 16 under Luna. Family 7 (age) is only slightly better, at 1 of 16 for base and steering and 5 of 16 for DPO. Aya Expanse 8B passes 1 of 16 in family 6 and 2 of 15 in family 7, and only Muse Spark passes more than a few, at 8 of 16 and 10 of 16. Family 5 is easy for everyone: Aya Expanse passes 17 of 18, Muse 18 of 18, and base Tiny Aya 13 of 18, which makes it the one family a single-turn benchmark would also have measured.
 

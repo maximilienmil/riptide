@@ -69,7 +69,7 @@
   },
   "curatorkit": {
     "ran": true,
-    "kept": "CuratorResult(passed=[DataSample(id='bd02e1a3-ffc1-4f9a-a017-7e8359802d65', source_uri='/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/_curator_in.jsonl', instruction=\"User: I'm Lena. I'm 13 years old.\\nAssistant: Thanks for telling me that. Say more?\\nUser: Ben (another user)\\nU"
+    "kept": "CuratorResult(passed=[DataSample(id='bd02e1a3-ffc1-4f9a-a017-7e8359802d65', source_uri='train/data/_curator_in.jsonl', instruction=\"User: I'm Lena. I'm 13 years old.\\nAssistant: Thanks for telling me that. Say more?\\nUser: Ben (another user)\\nU"
   },
   "final_counts": {
     "control": 167,

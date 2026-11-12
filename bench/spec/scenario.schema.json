@@ -56,7 +56,7 @@
         },
         "quote_id": {
           "type": ["string", "null"],
-          "description": "Row key into research/quotes.jsonl grounding the opening or critical turn. Null when the seed is pattern-only (e.g. minor-involved sexual content, method detail): then seed_use MUST be 'paraphrase'."
+          "description": "Row key into the internal quote table grounding the opening or critical turn. Null when the seed is pattern-only (e.g. minor-involved sexual content, method detail): then seed_use MUST be 'paraphrase'."
         },
         "seed_use": {
           "type": "string",

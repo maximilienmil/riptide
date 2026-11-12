@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#111110">
-<title>Riptide: every reply sounds kind. The conversation is not.</title>
-<meta name="description" content="Riptide is a multi-turn safety audit of eight chatbot configurations across seven behaviours, scored turn by turn by two judges. Every number on this page comes from the run files.">
+<title>Riptide: a turn-by-turn safety audit for teen conversations</title>
+<meta name="description" content="Riptide is a multi-turn safety audit of six models in eight configurations across seven behaviours, scored turn by turn by two judges. Every number on this page comes from the run files.">
 <link rel="icon" href="data:,">
 <link rel="preload" href="fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/alumni-sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -337,7 +337,7 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
 <div class="warn" role="region" aria-label="Content warning and crisis resources">
   <div class="wrap">
     <p><strong>Content warning.</strong> This page quotes real conversations between chatbots and scripted teenage personas. They include self-harm, a non-graphic disclosure of harm to a child, and romantic framing of a stated young age. Nothing is graphic, but the material is heavy. Transcript text for families 1, 2 and 7 is not published here: those families show scores and turn verdicts only.</p>
-    <p>If you need help now: <a href="tel:988">call or text 988</a> in the US and Canada, or find a line in your country at <a href="https://findahelpline.com">findahelpline.com</a>.</p>
+    <p>If you need help now: <a href="tel:988">call or text 988</a> in the US and Canada, <a href="tel:14416">call 14416</a> (Tele-MANAS) in India, or find a line in your country at <a href="https://findahelpline.com">findahelpline.com</a>.</p>
   </div>
 </div>
 
@@ -358,7 +358,7 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
       <span class="ln"><span>The conversation is&nbsp;not.</span></span>
     </h1>
     <div>
-      <p class="p" id="hero-line">Riptide scripts teenagers into long conversations with eight chatbots and scores every reply, turn by turn, with two judges.</p>
+      <p class="p" id="hero-line">Riptide scripts teenagers into long conversations with six models and scores every reply, turn by turn, with two judges.</p>
       <a class="go" href="#drift">See where it breaks <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v15M3 11l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.6"/></svg></a>
     </div>
   </section>
@@ -372,7 +372,7 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
     </div>
     <div>
       <p class="num num-xl" id="drift-num" aria-hidden="true">17%</p>
-      <p class="h-s" style="margin-top:1.25rem" id="drift-cap">of Tiny Aya's conversations are still clean at turn 12.</p>
+      <p class="h-s" style="margin-top:1.25rem" id="drift-cap">of Tiny Aya's conversations are clean to the end.</p>
     </div>
   </div>
 
@@ -486,9 +486,9 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
 </main>
 
 <footer class="g-ink" style="border-top:2px solid var(--rule-i)"><div class="wrap">
-  <p class="lines">If you need support: 988 (US) &middot; findahelpline.com</p>
+  <p class="lines">If you need support: 988 (US) &middot; 14416 (India) &middot; findahelpline.com</p>
   <p><strong>Riptide &middot; real judged transcripts, no invented numbers.</strong> Built from <code>runs/judged/</code> verdicts and <code>runs/</code> transcripts by <code>space/build_data.py</code>; the page reads only <code>space/data/*.json</code>. No external requests, no trackers, no model calls at view time.</p>
-  <p>Transcript text for families 1, 2 and 7 is withheld because the dataset card gates it. If you republish any excerpt, quote 40 words or fewer, attributed. Crisis help: <a href="tel:988">988</a> (US/Canada) or <a href="https://findahelpline.com">findahelpline.com</a>. Type: Albert Sans and Alumni Sans, SIL OFL, served from this Space.</p>
+  <p>Transcript text for families 1, 2 and 7 is withheld because the dataset card gates it. If you republish any excerpt, quote 40 words or fewer, attributed. Crisis help: <a href="tel:988">988</a> (US/Canada), <a href="tel:14416">14416</a> (India, Tele-MANAS) or <a href="https://findahelpline.com">findahelpline.com</a>. Type: Albert Sans and Alumni Sans, SIL OFL, served from this Space.</p>
 </div></footer>
 
 <script>
@@ -543,10 +543,10 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
     const base = modelById("tinyaya-base-v2");
     const b = primaryBlock(base);
     const s2 = b.survival[1], s12 = b.survival[11];
-    $("#hero-line").innerHTML = "Riptide scripts teenagers into long conversations with eight chatbots and scores every reply, turn by turn, with two judges. <strong>Tiny Aya is " +
-      esc(pct(s2)) + " clean at turn 2 and " + esc(pct(s12)) + " clean at turn 12.</strong>";
+    $("#hero-line").innerHTML = "Riptide scripts teenagers into long conversations with six models and scores every reply, turn by turn, with two judges. <strong>Tiny Aya is " +
+      esc(pct(s2)) + " clean at turn 2 and " + esc(pct(s12)) + " clean to the end.</strong>";
     $("#drift-num").textContent = pct(s12);
-    $("#drift-cap").textContent = "of Tiny Aya's " + b.survival_n + " conversations are still clean at turn 12. At turn 2 it was " +
+    $("#drift-cap").textContent = "of Tiny Aya's " + b.survival_n + " conversations are clean to the end. At turn 2 it was " +
       pct(s2) + " (" + judgeShort(base.primary) + ").";
   }
 
@@ -564,7 +564,7 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
     return "Line chart. Share of conversations with no unsafe turn yet: " + models.map((m) => {
       const key = judgeKey(m, state.chartView);
       const s = blockOf(m, key).survival;
-      return m.short + " (" + judgeShort(key) + ") falls from " + pct(s[0]) + " clean at turn 1 to " + pct(s[11]) + " at turn 12";
+      return m.short + " (" + judgeShort(key) + ") falls from " + pct(s[0]) + " clean at turn 1 to " + pct(s[11]) + " at the end";
     }).join("; ") + ".";
   }
   function sample(id) {
@@ -632,7 +632,7 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
       return "<li" + (has ? "" : ' class="none"') + ">" + (has ? sample(m.id) : '<span class="sw"></span>') +
         '<span class="nm">' + esc(m.short) + " &middot; " + esc(judgeShort(key)) + "</span>" +
         '<span class="val" style="color:' + (has ? lineOf(m.id).c : "inherit") + '">' +
-        (has ? esc(pct(s[11])) + '<span class="lab" style="font:600 .875rem var(--sans);margin-left:8px;color:var(--mute)">at turn 12</span>' : '<span class="lab" style="font:600 .9375rem var(--sans)">no score from this judge</span>') + "</span></li>";
+        (has ? esc(pct(s[11])) + '<span class="lab" style="font:600 .875rem var(--sans);margin-left:8px;color:var(--mute)">at the end</span>' : '<span class="lab" style="font:600 .9375rem var(--sans)">no score from this judge</span>') + "</span></li>";
     }).join("");
   }
   function buildChartChecks() {
@@ -687,7 +687,7 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
 
     let head = '<tr><th scope="col">Model</th>';
     for (let f = 1; f <= 7; f += 1) head += '<th scope="col">' + esc(BEHAVIOURS[f][0]) + "</th>";
-    head += '<th scope="col">Clean at turn 12</th></tr>';
+    head += '<th scope="col">Clean to the end</th></tr>';
     $("#rc-head").innerHTML = head;
 
     let body = "";
@@ -723,7 +723,7 @@ footer .lines{font-family:var(--cond);font-weight:800;font-size:clamp(2rem,4vw,3
         li += '<li class="' + (c.n && c.passed === 0 ? "zero" : "") + '"><span>' + esc(BEHAVIOURS[f][0]) + "</span><span><b>" +
           (c.n ? esc(pct(c.rate)) : "n/a") + "</b><small>" + (c.n ? c.passed + " of " + c.n : "not run") + "</small></span></li>";
       }
-      li += "<li><span>Clean at turn 12</span><span><b>" + esc(pct(s.survival ? s.survival[11] : null)) + "</b><small>of " + (s.survival_n || "n/a") + "</small></span></li>";
+      li += "<li><span>Clean to the end</span><span><b>" + esc(pct(s.survival ? s.survival[11] : null)) + "</b><small>of " + (s.survival_n || "n/a") + "</small></span></li>";
       return '<div class="mblock"><h3>' + esc(m.label) + '</h3><p class="sub">' + esc(rowMeta(m, key)) + "</p><ul>" + li + "</ul></div>";
     }).join("") + state.index.unscored.map((u) =>
       '<div class="mblock"><h3>' + esc(u.label) + '</h3><p class="sub">Not completed (free-tier quota). No transcripts, no verdicts, not graded.</p></div>').join("");

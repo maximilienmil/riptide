@@ -1,9 +1,9 @@
 # Track C — training data for the Tiny Aya repair (2026-11-04, v3)
 
-Generator: [train/gen_dpo_v3.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/gen_dpo_v3.py)
+Generator: [train/gen_dpo_v3.py](train/gen_dpo_v3.py)
 (`--stage gen|cross|merge`; v2 file kept as `train/data/dpo.v2.jsonl`).
-Outputs: [train/data/dpo.jsonl](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/dpo.jsonl) (709 DPO pairs),
-[train/data/steer_pairs.jsonl](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/steer_pairs.jsonl) (135 pairs),
+Outputs: [train/data/dpo.jsonl](train/data/dpo.jsonl) (709 DPO pairs),
+[train/data/steer_pairs.jsonl](train/data/steer_pairs.jsonl) (135 pairs),
 provenance in `train/data/_report_llm.json`, `_v3_new.jsonl`,
 `_v3_xjudge.json`, `_v3_cross_stats.json`.
 
@@ -127,7 +127,7 @@ Chosen-side scan: 14 hits, all benign idioms, kept.
   active.
 - Merge was re-run cleanly from committed code (`--stage merge --base
   dpo.v2.jsonl`, all inputs cached) and post-processing committed as
-  [train/v3_postprocess.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/v3_postprocess.py)
+  [train/v3_postprocess.py](train/v3_postprocess.py)
   (method-term scan + `sensitive` flags + steer/report refresh);
   outputs reproduced exactly (709/135/165).
 - Repo suite: 94 passed (incl. 2 new `tests/test_v3_xjudge.py` regression
@@ -139,11 +139,11 @@ Chosen-side scan: 14 hits, all benign idioms, kept.
 
 # Track C v2 (2026-11-04, kept below)
 
-Generator: [train/gen_dpo_llm.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/gen_dpo_llm.py)
-(reply path in [train/gen_situations.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/gen_situations.py)
+Generator: [train/gen_dpo_llm.py](train/gen_dpo_llm.py)
+(reply path in [train/gen_situations.py](train/gen_situations.py)
 is LLM-only since the template deletion).
-Outputs: [train/data/dpo.jsonl](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/dpo.jsonl) (480 DPO pairs),
-[train/data/steer_pairs.jsonl](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/steer_pairs.jsonl) (95 contrastive pairs),
+Outputs: [train/data/dpo.jsonl](train/data/dpo.jsonl) (480 DPO pairs),
+[train/data/steer_pairs.jsonl](train/data/steer_pairs.jsonl) (95 contrastive pairs),
 provenance in `train/data/_report_llm.json`, `train/data/_llm_cache.jsonl`,
 `train/data/dpo.precurator.jsonl`, `train/data/curator/`.
 
@@ -249,9 +249,9 @@ engagement), then re-run the Riptide eval for the 3-axis before/after.
 
 # Training runs (2026-11-04)
 
-Code: [infra/modal_train.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/infra/modal_train.py)
+Code: [infra/modal_train.py](infra/modal_train.py)
 (apps `riptide-trackc-train`, `riptide-tinyaya-dpo`, `riptide-tinyaya-steer`);
-endpoint smoke script: [train/smoke_endpoints.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/smoke_endpoints.py).
+endpoint smoke script: [train/smoke_endpoints.py](train/smoke_endpoints.py).
 Nothing uploaded to HF. GPU: A10G (L4 pool exhausted again, same as 11-03;
 L4 remains the cheapest fit per the tok/s table — $0.80/hr at ~18.8-27.9
 tok/s batch-1 — but never scheduled, so A10G $1.10/hr is the fallback).
@@ -324,13 +324,13 @@ app, credits −$14.04, billed $0.00). Well under the $6 cap.
 
 # Repair-v2 training runs (2026-11-05)
 
-Code: [infra/modal_repair_v2.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/infra/modal_repair_v2.py)
+Code: [infra/modal_repair_v2.py](infra/modal_repair_v2.py)
 (apps `riptide-trackc-v2`, `riptide-tinyaya-steer2`, `riptide-tinyaya-dpo2`);
-miner [train/gen_dpo_v4_hard.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/gen_dpo_v4_hard.py);
-Judge-A-only [train/judge_a_only.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/judge_a_only.py),
-compare [train/compare_v2.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/compare_v2.py),
-metrics [train/metrics_a_only.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/metrics_a_only.py).
-Full story: [research/repair-v2.md](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/research/repair-v2.md).
+miner [train/gen_dpo_v4_hard.py](train/gen_dpo_v4_hard.py);
+Judge-A-only [train/judge_a_only.py](train/judge_a_only.py),
+compare [train/compare_v2.py](train/compare_v2.py),
+metrics [train/metrics_a_only.py](train/metrics_a_only.py).
+Full story: [research/repair-v2.md](research/repair-v2.md).
 Frozen baselines (`runs/judged/tinyaya-{base-v2,dpo,steer}/`,
 volume dirs, v1 apps) untouched throughout.
 
@@ -357,7 +357,7 @@ novel 8-grams with same old row). No `bench/scenarios/` reads anywhere
 (freshness by construction); no cross-judge (quotas dead).
 Yield: 307 kept (f6 174, f7 133; all chosen A=3, all rejected A=0).
 The frozen 709-row file is untouched; the merged 1016-row set is
-[train/data/dpo.v4.jsonl](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/dpo.v4.jsonl).
+[train/data/dpo.v4.jsonl](train/data/dpo.v4.jsonl).
 New rows `_v4_new.jsonl`, report `_v4_report.json`.
 
 ## DPO-v2 (SHIP the lr1e-4 adapter)

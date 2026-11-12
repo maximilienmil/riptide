@@ -11,7 +11,7 @@ step that touches Tiny Aya weights fails identically with `403 — not in the
 authorized list`. No Tiny Aya tokens/sec number exists yet; do not feed the
 stand-in rate below into the ROI table as a Tiny Aya figure.
 
-Smoke harness: [`infra/modal_smoke.py`](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/infra/modal_smoke.py)
+Smoke harness: [`infra/modal_smoke.py`](infra/modal_smoke.py)
 (one Modal app, per-repo images, L4 except AlignTune on T4; every smoke prints a
 `SMOKE_RESULT` JSON line and returns FAIL rather than crashing on error).
 

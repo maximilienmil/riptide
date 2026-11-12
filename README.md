@@ -2,13 +2,15 @@
 
 # Riptide
 
-**Every reply sounds kind. The conversation is not.**
+**A turn-by-turn safety audit for teen conversations.**
 
 A multi-turn safety audit of chatbots. Single-turn tests miss the failure
 mode that matters: a conversation drifts somewhere unsafe while each
 individual reply still looks fine. Riptide scripts teenagers into long
 conversations, scores every turn with two independent judges, and then tries
 to repair a small open model without making it cold.
+
+**Author.** One author: GitHub `maximilienmil`, Hugging Face `maximilianmilo`.
 
 **AI disclosure.** I directed the project and labelled the 50 turns behind the
 reliability figures. AI coding agents wrote the runner, the harness, the
@@ -29,7 +31,7 @@ statement is at the top of `docs/article.md`.
 
 ## The finding
 
-Tiny Aya base keeps 81% of conversations clean at turn 2 and 17% at turn 12.
+Tiny Aya base keeps 81% of conversations clean at turn 2 and 17% clean through to the end of the conversation.
 Aya Expanse 8B falls from 92% to 26%. Muse Spark 1.3 holds 97% to 71%. A
 model can look adequate at the start and fail most of the way through.
 
@@ -115,7 +117,7 @@ The benchmark deliberately scripts teenage distress. Nothing is graphic, and
 transcript text for the disclosure and age families is only distributed
 through the gated dataset, under terms that require a stated research purpose
 and forbid redistribution. If you quote an excerpt, keep it to 40 words or
-fewer and attribute it. Crisis help: 988 (US/Canada) or
+fewer and attribute it. Crisis help: 988 (US/Canada), 14416 (India, Tele-MANAS) or
 [findahelpline.com](https://findahelpline.com).
 
 The dataset and the derived artifacts are CC-BY-NC-4.0, inherited from

@@ -23,7 +23,7 @@ SRC = ROOT / "docs" / "article.md"
 THUMB = ROOT / "assets" / "blog" / "thumbnail.png"
 FONTS = ROOT / "space" / "fonts"
 
-TITLE = "Riptide: every reply sounds kind, the conversation is not"
+TITLE = "Riptide: a turn-by-turn safety audit for teen conversations"
 
 CSS = """
 :root{
@@ -109,7 +109,7 @@ def main() -> int:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{TITLE}</title>
-<meta name="description" content="A multi-turn safety audit of eight chatbot configurations, scored turn by turn by two independent judges, plus a repair that keeps the model kind.">
+<meta name="description" content="A multi-turn safety audit of six models in eight configurations, scored turn by turn by two independent judges, plus a repair that keeps the model kind.">
 <meta property="og:title" content="{TITLE}">
 <meta property="og:image" content="thumbnail.png">
 <meta property="og:type" content="article">
@@ -130,14 +130,14 @@ def main() -> int:
     <a href="https://github.com/maximilienmil/riptide">Code</a>
     <a href="https://youtu.be/bvprQrSPzdU">Video</a>
   </p>
-  <img class="hero" src="thumbnail.png" alt="Riptide: 81% of conversations clean at turn 2, 17% at turn 12" width="1300" height="650">
+  <img class="hero" src="thumbnail.png" alt="Riptide: Tiny Aya: 81% of conversations clean at turn 2, 17% clean to the end" width="1300" height="650">
 </header>
 <article>
 {html}
 </article>
 <footer>
   <p><strong>Riptide</strong> &middot; real judged transcripts, no invented numbers.
-  Crisis help: <a href="tel:988">988</a> (US/Canada) or
+  Crisis help: <a href="tel:988">988</a> (US/Canada), <a href="tel:14416">14416</a> (India, Tele-MANAS) or
   <a href="https://findahelpline.com">findahelpline.com</a>.
   Transcript text for the disclosure and age families is distributed only through
   the gated dataset.</p>

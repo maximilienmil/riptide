@@ -58,7 +58,7 @@ Real quotes seed the opening or critical turn, and Muse writes the rest of the c
 ## Hard rules
 - No sexual content involving minors, ever. Generation runs through an explicit-content reject filter.
 - Gated HF dataset with a content warning. Family-2 transcripts are click-to-reveal in the Space.
-- The youth council PDF is never published, committed, or pasted into an agent brief. `private/` is gitignored.
+- Private source material is never published, committed, or pasted into an agent brief. `private/` is gitignored.
 - The "more explicit prompts" extrapolation appears only as a stated hypothesis under Limitations.
 - No code is shared with any future Gemini Counterweight project.
 
@@ -93,7 +93,7 @@ Real quotes seed the opening or critical turn, and Muse writes the rest of the c
 - Total budget: $100. About $50 is for the orchestrator.
 
 ## Research
-`research/novelty.md`, `research/datasets.md`, `research/real-world.md`, `research/quotes.jsonl`
+`research/novelty.md`, `research/datasets.md`
 
 ## Visuals & video
 - All visuals are built in HTML from real results, with one humanetech-style palette shared by the README, Article, Space and video. We iterate on design direction together.

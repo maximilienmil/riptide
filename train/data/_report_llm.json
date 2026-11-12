@@ -88,7 +88,7 @@
   "after_contamination": 712,
   "curatorkit": {
     "ran": true,
-    "kept": "CuratorResult(passed=[DataSample(id='d129e2fe-58a3-4492-b87f-86050f1285f5', source_uri='/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/_curator_in.jsonl', instruction=\"Teen: I'm Milo. Nova is working on a simple game but keeps getting an error message.\\nAssistant: Thanks for tell"
+    "kept": "CuratorResult(passed=[DataSample(id='d129e2fe-58a3-4492-b87f-86050f1285f5', source_uri='train/data/_curator_in.jsonl', instruction=\"Teen: I'm Milo. Nova is working on a simple game but keeps getting an error message.\\nAssistant: Thanks for tell"
   },
   "curatorkit_minhash_dropped": 0,
   "final_counts": {

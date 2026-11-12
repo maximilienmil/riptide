@@ -27,3 +27,8 @@ bench/spec/examples/f1-std-001.json
 
 # generated static article (assets/blog/build_site.py)
 site/
+
+# Excerpts from public filings and reporting: kept locally, not republished
+research/quotes.jsonl
+research/quotes.v2.jsonl
+research/real-world.md

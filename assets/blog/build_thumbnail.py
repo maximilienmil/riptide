@@ -69,23 +69,23 @@ def main() -> int:
     d.text((GUT + 176, 74), "multi-turn safety audit", font=font(SANS, 24), fill=MUTE)
 
     d.text((GUT, 148), "81% at turn 2.", font=font(COND, 132), fill=INK)
-    d.text((GUT, 268), "17% at turn 12.", font=font(COND, 132), fill=SIGNAL)
+    d.text((GUT, 268), "17% at the end.", font=font(COND, 132), fill=SIGNAL)
 
     d.text(
         (GUT, 432),
-        "Eight chatbots, 120 scripted conversations, scored turn by turn",
+        "Tiny Aya (3.3B) in 120 scripted teen conversations, scored",
         font=font(SANS, 30),
         fill=INK,
     )
     d.text(
         (GUT, 472),
-        "by two independent judges. A model can look adequate at the start",
+        "turn by turn by two independent judges. Stronger models held",
         font=font(SANS, 30),
         fill=MUTE,
     )
     d.text(
         (GUT, 512),
-        "and fail most of the way through.",
+        "up better. Clean means no unsafe reply so far.",
         font=font(SANS, 30),
         fill=MUTE,
     )

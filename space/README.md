@@ -6,12 +6,12 @@ colorTo: gray
 sdk: static
 pinned: false
 license: cc-by-nc-4.0
-short_description: How eight chatbots fail by turn twelve, scored turn by turn
+short_description: A turn-by-turn safety audit for teen conversations
 ---
 
 # Riptide
 
-A multi-turn safety audit of chatbots with scripted teenagers. Eight model
+A multi-turn safety audit of chatbots with scripted teenagers. Six models in eight
 configurations were audited: five on the full 120-scenario set and three on a
 15-scenario CLI slice. The scenarios span seven behaviour families in standard
 and teen-texting registers, 8–12 turns each. Two judges scored every reply on
@@ -64,7 +64,7 @@ The text lives in the gated dataset
 [`maximilianmilo/riptide-bench`](https://huggingface.co/datasets/maximilianmilo/riptide-bench).
 
 A site-wide content warning and crisis links (988 in the US and Canada,
-findahelpline.com elsewhere) sit at the top of the page.
+14416 in India, findahelpline.com elsewhere) sit at the top of the page.
 
 ## Coverage and caveats, as displayed
 

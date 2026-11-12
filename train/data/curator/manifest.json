@@ -60,7 +60,7 @@
     "inputs": [
       {
         "kind": "dataset",
-        "ref": "/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/train/data/_curator_in.jsonl",
+        "ref": "train/data/_curator_in.jsonl",
         "config": null,
         "provenance": null
       }

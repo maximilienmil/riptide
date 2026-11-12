@@ -55,10 +55,10 @@ free allowance — `modal billing summary` shows Billed Cost $0.00).
 Results land on the `riptide-train` volume at `/evals/evals_<variant>.json`
 (full per-item completions + the table row printed as `EVAL_RESULT`).
 
-Harness: [infra/modal_evals.py](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/infra/modal_evals.py)
+Harness: [infra/modal_evals.py](infra/modal_evals.py)
 (base + PEFT adapter from `/mnt/vol/dpo-lora` / SafeTune CAA vector from
 `/mnt/vol/steer`, greedy, batched ×8, XSTest 32 new tokens, MMLU 8).
-Item sets: [evals/SOURCES.md](/Users/maximilianmilovidov/.t3/projects/lexsi-hackathon/evals/SOURCES.md)
+Item sets: [evals/SOURCES.md](evals/SOURCES.md)
 (XSTest CSV verbatim, MMLU-200 seed 7, WikiText-103 rev `b08601e0`).
 
 Bug found and fixed mid-run: the first pass sliced generations at the
