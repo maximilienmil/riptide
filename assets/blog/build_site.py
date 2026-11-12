@@ -48,6 +48,10 @@ h1{font:400 clamp(2.4rem,6vw,4rem)/1.02 var(--cond);letter-spacing:-.01em;margin
 .artifacts a{color:var(--patina-p);text-decoration:none;border-bottom:1px solid rgba(11,125,110,.35)}
 .artifacts a:hover{border-bottom-color:var(--patina-p)}
 img.hero{display:block;width:100%;height:auto;margin:2.6rem 0 0;border:1px solid var(--rule)}
+.disclosure{margin:0 0 1.6rem;padding:.9rem 1rem;border-left:3px solid var(--signal);
+  background:var(--cell);font-size:15px;line-height:1.55;color:var(--mute-p)}
+.disclosure p{margin:0}
+.disclosure strong{color:var(--ink)}
 article{padding-top:2.6rem}
 h2{font:400 clamp(1.7rem,3.4vw,2.3rem)/1.15 var(--cond);margin:3.2rem 0 .9rem}
 h3{font:600 1.05rem/1.4 var(--sans);margin:2.2rem 0 .6rem}
@@ -83,6 +87,14 @@ def main() -> int:
         output_format="html5",
     )
 
+    # the disclosure is the first paragraph of the source; lift it into the
+    # header so it is visible without scrolling past the hero
+    disclosure = ""
+    dm = re.match(r"\s*<p><strong>Disclosure\.</strong>.*?</p>\s*", html, re.S)
+    if dm:
+        disclosure = '<div class="disclosure">' + dm.group(0).strip() + "</div>"
+        html = html[dm.end():]
+
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / "fonts").mkdir(parents=True)
@@ -109,6 +121,7 @@ def main() -> int:
   <p class="kicker">Riptide &middot; multi-turn safety audit</p>
   <h1>{m.group(1)}</h1>
   <p class="byline">Maximilian Milovidov &middot; November 2026</p>
+  {disclosure}
   <p class="artifacts">
     <a href="https://huggingface.co/spaces/maximilianmilo/riptide">Report cards</a>
     <a href="https://huggingface.co/datasets/maximilianmilo/riptide-bench">Dataset</a>

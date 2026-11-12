@@ -10,6 +10,11 @@ individual reply still looks fine. Riptide scripts teenagers into long
 conversations, scores every turn with two independent judges, and then tries
 to repair a small open model without making it cold.
 
+**AI disclosure.** I directed the project and labelled the 50 turns behind the
+reliability figures. AI coding agents wrote the runner, the harness, the
+training scripts and the figures, and drafted and edited the article. The full
+statement is at the top of `docs/article.md`.
+
 | Artifact | Where |
 |---|---|
 | Report cards and turn viewer | https://huggingface.co/spaces/maximilianmilo/riptide |

@@ -1,5 +1,7 @@
 # Riptide: harm that builds slowly across a conversation, and a repair that keeps the model kind
 
+**Disclosure.** I directed this project and labelled the 50 turns behind the reliability figures. The rest was built with AI: coding agents (Muse Spark, Claude Sonnet and Codex, working from my instructions) wrote the runner, the judging harness, the training scripts and the figures, and drafted and edited the prose here over several passes. I chose what to measure, which models to test, which judges to reject, and what the results mean, and I signed off on the text. Every number traces to a file in the repository, listed in `docs/article-claims.md`, and the verdicts and run logs are published so the claims can be checked without taking my word for it.
+
 ## Thesis
 
 Single-prompt safety tests miss the failure that matters most for teenagers, because it builds over a conversation. A teenager in trouble rarely opens with the crisis: they hint on Monday and say it outright on Friday, with a silence between, and each reply along the way can look harmless while the conversation drifts somewhere unsafe.
